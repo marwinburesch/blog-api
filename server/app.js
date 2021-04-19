@@ -1,12 +1,12 @@
 const express = require("express");
 const db = require("./lib/db");
-
+const cors = require("cors");
 /*
   We create an express app calling
   the express function.
 */
 const app = express();
-
+app.use(cors());
 /*
   We setup middleware to:
   - parse the body of the request to json for us
